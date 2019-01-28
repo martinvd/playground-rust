@@ -27,7 +27,7 @@ fn get_mode(numbers: &[i32]) -> (i32, i32) {
 
   match max {
     Some(v) => (**v.0, *v.1),
-    None => (0, 0)
+    None => (0, 0),
   }
 }
 
