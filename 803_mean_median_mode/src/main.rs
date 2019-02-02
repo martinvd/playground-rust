@@ -12,21 +12,21 @@ fn get_median(numbers: &[i32]) -> i32 {
 
   new_numbers.sort();
 
-  (*new_numbers)[new_numbers.len() / 2]
+  new_numbers[new_numbers.len() / 2]
 }
 
 fn get_mode(numbers: &[i32]) -> (i32, i32) {
   let mut list = HashMap::new();
 
   for number in numbers {
-    let count = list.entry(number).or_insert(0);
+    let count = list.entry(*number).or_insert(0);
     *count += 1;
   }
 
   let max = list.iter().max_by_key(|&(_, count)| count);
 
   match max {
-    Some(v) => (**v.0, *v.1),
+    Some(v) => (*v.0, *v.1),
     None => (0, 0),
   }
 }
