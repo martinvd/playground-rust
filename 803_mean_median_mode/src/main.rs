@@ -2,9 +2,9 @@ use std::collections::HashMap;
 
 fn get_average(numbers: &[i32]) -> f32 {
   let total: i32 = numbers.into_iter().sum();
-  let size = numbers.len() as f32;
+  let size = numbers.len();
 
-  total as f32 / size
+  total as f32 / size as f32
 }
 
 fn get_median(numbers: &[i32]) -> i32 {
