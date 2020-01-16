@@ -13,11 +13,17 @@ fn get_average(numbers: &[i32]) -> f32 {
 }
 
 fn get_median(numbers: &[i32]) -> i32 {
+  let size = numbers.len();
+
+  if size == 0 {
+    return 0;
+  }
+
   let mut new_numbers = numbers.to_owned();
 
   new_numbers.sort();
 
-  new_numbers[new_numbers.len() / 2]
+  new_numbers[size / 2]
 }
 
 fn get_mode(numbers: &[i32]) -> (i32, i32) {
