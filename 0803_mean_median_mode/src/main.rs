@@ -1,8 +1,13 @@
 use std::collections::HashMap;
 
 fn get_average(numbers: &[i32]) -> f32 {
-  let total: i32 = numbers.into_iter().sum();
   let size = numbers.len();
+
+  if size == 0 {
+    return 0 as f32;
+  }
+
+  let total: i32 = numbers.into_iter().sum();
 
   total as f32 / size as f32
 }
