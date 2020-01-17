@@ -4,7 +4,7 @@ fn get_average(numbers: &[i32]) -> f32 {
   let size = numbers.len();
 
   if size == 0 {
-    return 0 as f32;
+    return 0.0;
   }
 
   let total: i32 = numbers.into_iter().sum();
