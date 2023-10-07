@@ -1,6 +1,6 @@
 # playground-rust
 
-Personal project to learn [Rust](https://www.rust-lang.org/) using [the Rust book](https://doc.rust-lang.org/book/).
+Personal project to learn [Rust](https://www.rust-lang.org/).
 
 ## License
 
